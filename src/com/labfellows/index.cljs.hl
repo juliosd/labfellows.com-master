@@ -1,0 +1,133 @@
+(page "index.html" (:require [com.labfellows.core :as c]))
+
+
+(html
+ (head
+  (title "Lab Fellows - Your Research Concierge")
+  (link :href "css/bootstrap.min.css" :rel "stylesheet")
+  (link :href "css/landing-page.css" :rel "stylesheet")
+  (link :href "font-awesome/css/font-awesome.min.css" :rel "stylesheet" :type "text/css")
+  (link :href "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" :rel "stylesheet" :type "text/css"))
+ (body
+  (nav {:class "navbar navbar-default navbar-inverse navbar-fixed-top topnav", :role "navigation"}
+       (div {:class "container topnav"}
+            (div {:class "navbar-header"}
+                 (button {:type "button", :class "navbar-toggle", :data-toggle "collapse", :data-target "#bs-example-navbar-collapse-1"}
+                         (span {:class "sr-only"} "Toggle navigation")
+                         (span {:class "icon-bar"})
+                         (span {:class "icon-bar"})
+                         (span {:class "icon-bar"}))
+                 (a {:shape "rect", :id "logo", :class "navbar-brand topnav", :href "#"} "Lab Fellows"))
+            (div {:class "collapse navbar-collapse", :id "bs-example-navbar-collapse-1"}
+                 (ul {:class "nav navbar-nav navbar-right"}
+                     (li (a {:shape "rect", :href "#about"} "Get Started"))
+                     (li (a {:shape "rect", :href "#services"} "Consultants"))
+                     (li (a {:shape "rect", :href "#contact"} "Labs"))
+                     (li (a {:shape "rect", :href "#services"} "FAQ"))
+                     (li (a {:shape "rect", :href "#services"} "Contact Us"))))))
+  (a {:shape "rect", :name "about"})
+  (div {:class "intro-header"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-12"}
+                      (div {:class "intro-message"}
+                           (h1 :id "tagline" "Moving Science Farther, Faster")
+                           (h2 :id "description" "Providing Concierge support for Research Scientists with services ranging from on-demand equipment and labs to full service contract experiment.")
+                           (ul {:class "list-inline intro-social-buttons"}
+                               (li (a {:shape "rect", :class "btn btn-primary btn-lg", :href "#"}
+                                      (i {:class "fa fa-check fa-fw"})
+                                      (span {:class "network-name"} " Get Started")))))))))
+
+  (a {:shape "rect", :name "services"})
+  (div {:class "content-section-a"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-5 col-sm-6"}
+                      (hr {:class "section-heading-spacer"})
+                      (div {:class "clearfix"})
+                      (h2 {:class "section-heading"} "Focus on your Research"
+                          (br {:clear "none"})
+                          "Use Our Experiment Guide")
+                      (p {:class "lead"} 
+                         "Lab Fellows frees you from the limitations of your lab. Utilizing our Request Guide, Lab Fellows will find the equipment and resources you need to complete your projects. Whether its as simple as walk-up access to an NMR or as complex as virtually scaling your equipment bandwidth from 1 to 5 pieces, we have you covered."))
+                 (div {:class "col-lg-5 col-lg-offset-2 col-sm-6"}
+                      (a :target "_blank" :href "https://www.flickr.com/photos/smanography/2753604544"
+                         (img {:class "img-responsive", :src "img/focus.jpg", :alt "&copy; Sherman Geronimo-Tan on Flickr, cc-by"}))))))
+
+  (div {:class "content-section-b"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6"}
+                      (hr {:class "section-heading-spacer"})
+                      (div {:class "clearfix"})
+                      (h2 {:class "section-heading"} "Not Sure Exactly What You Need? No Problem!")
+                      (p {:class "lead"} 
+                         "Lab Fellows provides all Requests with the option for a complimentary review by an Experiment Specialist. Our Specialists are highly curated consultants with decades of Industry expertise. They will provide a one-hour phone call to discuss the goals, protocols, etc. of your project and provide feedback and clarification. After the call, Lab Fellows will send a summary of what was discussed and recommended course of action."))
+                 (div {:class "col-lg-5 col-sm-pull-6 col-sm-6"}
+                      (a :target "_blank" :href "https://www.flickr.com/photos/re-publica/14105111472"
+                         (img {:class "img-responsive", :src "img/hack-day.jpg", :alt "&copy; re:publica on Flickr, cc-by"}))))))
+  (div {:class "content-section-a"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-5 col-sm-6"} (hr {:class "section-heading-spacer"})
+                      (div {:class "clearfix"})
+                      (h2 {:class "section-heading"} "Consultants: We compliment your business")
+                      (p {:class "lead"} "Lab Fellows want to support Research Consultants, no be their competition. Let us handle finding resources and logistics, freeing you to pay more attention to your clients' needs. Contact us to find out all the ways Lab Fellows can compliment and increase your business.")
+                      (p :class "lead" (a :href "mailto:consultant@labfellows.com" "Click Here to contact us.")))
+                 (div {:class "col-lg-5 col-lg-offset-2 col-sm-6"}
+                      (a :target "_blank" :href "https://flic.kr/p/6tSY7b"
+                         (img {:class "img-responsive", :src "img/doctor-science.jpg", :alt "&copy; JD Hancock on Flickr, cc-by"}))))))
+  (div {:class "content-section-b"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6"}
+                      (hr {:class "section-heading-spacer"})
+                      (div {:class "clearfix"})
+                      (h2 {:class "section-heading"} "Labs: Put Your Idle Equipment to Work")
+                      (p {:class "lead"} 
+                         "Lab Fellows removes the hassel and risk from renting out your equipment. From directing requests to your lab to fully managing your rental program, Lab Fellows has you covered.")
+                      (p :class "lead" (a :href "mailto:host@labfellows.com" "Click Here to get started.")))
+                  (div {:class "col-lg-5 col-sm-pull-6 col-sm-6"}
+                      (a :target "_blank" :href "https://www.flickr.com/photos/tomascarvalho/10524182535"
+                         (img {:class "img-responsive", :src "img/beaker.jpg", :alt "&copy; IT@c on Flickr, cc-by"}))))))
+  (a {:shape "rect", :name "contact"})
+  (div {:class "banner"}
+       (div {:class "container"}
+            (div {:class "row"}
+                 (div {:class "col-lg-8"}
+                      (h2 "Become a Lab Fellow:"))
+                 (div {:class "col-lg-4"}
+                      (div {:class "row text-center"}
+                           (a {:shape "rect", :class "btn btn-primary btn-lg", :href "https://twitter.com/SBootstrap"}
+                              (i {:class "fa fa-check fa-fw"})
+                              (span {:class "network-name"} "Get Started")))
+                      (div {:class "row text-center" :style "margin:10px"}
+                           (a :href "//labfellows.com/wp-login.php"
+                              (button {:class "btn btn-default btn-xs"}
+                                      "Existing user login")))))))
+  (footer
+   (div {:class "container"}
+        (div {:class "row"}
+             (div {:class "col-lg-12"}
+                  (ul {:class "list-inline"}
+                      (li (a {:shape "rect", :href "#"} "Home"))
+                      (li {:class "footer-menu-divider"} "⋅")
+                      (li (a {:shape "rect", :href "#about"} "Get Started"))
+                      (li {:class "footer-menu-divider"} "⋅")
+                      (li (a {:shape "rect", :href "#services"} "Consultants"))
+                      (li {:class "footer-menu-divider"} "⋅")
+                      (li (a {:shape "rect", :href "#contact"} "Labs"))
+                      (li {:class "footer-menu-divider"} "⋅")
+                      (li (a {:shape "rect", :href "#contact"} "FAQ"))
+                      (li {:class "footer-menu-divider"} "⋅")
+                      (li (a {:shape "rect", :href "#contact"} "Contact"))
+                      )
+                  (p {:class "copyright text-muted small"} "Copyright © Lab Fellows, Inc. 2015. All Rights Reserved.")
+                  (p {:class "text-muted small"} "Photos are copyright their respective owners, "
+                     (a :href "https://creativecommons.org/licenses/by/4.0/" "Creative Commons 4.0"))
+                  (p {:class "made-by text-muted small"} "Made with Clojure and "
+                     (a :target "_blank" :href "https://www.flickr.com/photos/89545521@N03/8153349030" "mad science."))))))
+  (script {:src "js/jquery.js"})
+  (script {:src "js/bootstrap.min.js"})))
+ 
+
